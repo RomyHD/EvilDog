@@ -38,13 +38,9 @@ ui {
 li {
     display: inline;
     background-color: aquamarine;
-    
-}
-img{padding-left: 2.5cm;
-    
 }
 
-center {
+img {
   display: block;
   margin-left: auto;
   margin-right: auto;

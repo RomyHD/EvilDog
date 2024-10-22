@@ -43,3 +43,10 @@ li {
 img{padding-left: 2.5cm;
     
 }
+
+center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

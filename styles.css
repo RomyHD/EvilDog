@@ -23,11 +23,12 @@ h3 {
 }
 ui {
     list-style-type: none;
-    text-align: center;
+    display: inline-block;
+    text-align: left;
     font-size: x-large;
     
 
-    padding-left: 10cm;
+    
     
     
 }

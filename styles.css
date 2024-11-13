@@ -207,6 +207,7 @@ header .container .content nav a:hover::after {
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 11s;
+  font-family: "Playfair Display", serif;
 }
 
 .hero .container .content .arrow {

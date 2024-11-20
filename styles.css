@@ -6,7 +6,10 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
+
+
 
 body {
   background-color: #000;
@@ -25,7 +28,7 @@ header {
   width: 97%;
   margin-left: 20px;
   height: 10vh;
-  background: darkslategray;
+  background: linear-gradient(to right, lightgray , gray , darkgray );
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
   
@@ -129,7 +132,10 @@ section {
 
 section:nth-child(odd) {
   background-color: gray;
+  
 }
+
+
 
 .anggota{
   padding: 0 40px;
@@ -316,7 +322,13 @@ svg text {
   }
 }
 
+
+
 @media screen and (max-width: 1024px) {
+  body{
+    margin: 0;
+  }
+  
   header nav,
   header .extra-nav {
     display: none;
@@ -412,6 +424,9 @@ svg text {
   header .mobile-nav ul li {
     width: 50%;
   }
-  .flip-card{
-    width: 10px;}
+  header{
+    width: 87%;
+    align-items: center;
+    
+  }
 }

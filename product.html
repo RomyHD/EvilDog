@@ -1,77 +1,145 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-
-        <title>Blank template</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="icon" href="asset/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Shojumaru&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/animation/index2.html" />
+    <title>EvilDog</title>
+  </head>
+  <body>
+    
+    <header>
+     
+      <div class="logo">
+        <img src="anjingpikachu.png" alt="logo" />
+        <a href="#">EvilDog</a>
+      </div>
 
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="style2.css">
-
-    </head>
-
-    <body>
-        <header>
-            <div class="container">
-              <div class="content">
-                <div class="logo">
-                  <img src="anjingpikachu.png" alt="logo" />
-                  <h1>EVILDOG</h1>
-                </div>
-      
-                <nav>
-                  <a href="index.html">beranda</a>
-                  <a href="process.html">process</a>
-                  <a href="product.html">produk</a>
-                </nav>
-              </div>
-            </div>
-          </header>
-      
-          <section class="hero">
-            <div class="container">
-              <div class="content">
-                
-      
-                <svg viewBox="0 0 1320 300">
-                  <text x="50%" y="50%" fill="transparent" text-anchor="middle">
-                    EVILDOG
-                  </text>
-                </svg>
-      
-                <div class="about">
-                  <p>
-                    selamat datang ke website kami 
-                  </p>
-                </div>
-      
-                <box-icon
-                  name="chevron-down"
-                  class="arrow"
-                  color="#ffffff"
-                ></box-icon>
-              </div>
-            </div>
-          </section>
-      
-          <!-- Box Icon -->
-          <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-        </body>
-      </html>
+      <nav>
+        <a href="index.html">Home</a>
         
+        <a href="process.html">process</a>
+        <a href="product.html">product</a>
+      </nav>
 
+      
+
+      <div id="menu" class="hamburger-menu">
+        <svg
+          width="35px"
+          height="35px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 18L20 18"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 12L20 12"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 6L20 6"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="nav-mobile" class="mobile-nav">
+        <div id="close-mobile" class="close">
+          <svg
+            width="800px"
+            height="800px"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #ffffff;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+
+            <title />
+
+            <g id="cross">
+              <line class="cls-1" x1="7" x2="25" y1="7" y2="25" />
+
+              <line class="cls-1" x1="7" x2="25" y1="25" y2="7" />
+            </g>
+          </svg>
+        </div>
+        <ul>
+          <li><a class="nav-link" href="#">Home</a></li>
+          
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      
+
+    </header>
+
+    <section id="home">
+      <div class="card">
+        
+        <h1>CALCUALATOR UMUR</h1>
+       
+
+       <div>
+           <label>Masukkan Tanggal Lahir Anda</label><br>
+           <input id="inputDob" 
+                  type="date" 
+                  value="2000-01-01" />
+       </div>
+       <br />
+
+       <!-- Take the date from which age is to be calculated -->
+       <div>
+           <label>TANGGAL SAAT INI</label><br>
+           <input id="cdate"
+                  type="date" 
+                  value="" />
+       </div>
+       <br />
+
+       <button type="button" 
+               onclick="getDOB()">
+           Calculate
+       </button>
+       <br />
+       <div id="currentAge"></div>
+       <script src="script.js"></script>
+     </div>
+    </section>
 
     
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
-        
-        
-        
-    </body>
 
+
+    <!-- Load external JavaScript -->
+    <script src="index2.js"></script>
+  </body>
 </html>

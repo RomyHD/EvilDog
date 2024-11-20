@@ -3,72 +3,206 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="asset/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Shojumaru&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css" />
-    <title>EVILDOG</title>
+    <link rel="stylesheet" href="/animation/index2.html" />
+    <title>EvilDog</title>
   </head>
   <body>
-    <section class="scene-2">
-      <span>EVIL</span>
-      <span>DOG</span>
-      <span>PRESENTING</span>
-      <div class="circle"></div>
-    </section>
-
+    
     <header>
-      <div class="container">
-        <div class="content">
-          <div class="logo">
-            <img src="anjingpikachu.png" alt="logo" />
-            <h1>EVILDOG</h1>
-          </div>
+     
 
-          <nav>
-            <a href="index.html">beranda</a>
-            <a href="process.html">process</a>
-            <a href="product.html">produk</a>
-          </nav>
-        </div>
+      <div class="logo">
+        <img src="anjingpikachu.png" alt="logo" />
+        <a href="#">EvilDog</a>
       </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">Anggota</a>
+        <a href="process.html">process</a>
+        <a href="product.html">product</a>
+      </nav>
+
+      
+
+      <div id="menu" class="hamburger-menu">
+        <svg
+          width="35px"
+          height="35px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 18L20 18"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 12L20 12"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 6L20 6"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="nav-mobile" class="mobile-nav">
+        <div id="close-mobile" class="close">
+          <svg
+            width="800px"
+            height="800px"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #ffffff;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+
+            <title />
+
+            <g id="cross">
+              <line class="cls-1" x1="7" x2="25" y1="7" y2="25" />
+
+              <line class="cls-1" x1="7" x2="25" y1="25" y2="7" />
+            </g>
+          </svg>
+        </div>
+        <ul>
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      
+
     </header>
 
-    <section class="hero">
-      <div class="container">
-        <div class="content">
-          
+    <section id="home">
+      <svg viewBox="0 0 1320 300">
+        <text x="50%" y="50%" text-anchor="middle">
+            EVILDOG
+        </text>
+        
+    </svg>
+      
+       
 
-          <svg viewBox="0 0 1320 300">
-            <text x="50%" y="50%" fill="transparent" text-anchor="middle">
-              EVILDOG
-            </text>
-          </svg>
+      </div>
+      
+      
+      
+       
+      
+       
+    </section>
 
-          <div class="about">
-            <p>
-              welcome to our website 
-            </p>
+    <section id="about">
+      
+      <div class="anggota">
+        <div class="card">
+          <div class="img">
+            <img src="orgil.jpeg" alt="">
           </div>
+          <div class="top-text">
+            <div class="name">your name</div>
+          <p>application developer</p>
+          </div>
+          <div class="bottom-text">
+            <div class="text">wadkaiwdkaidkwiakdwwiadkiwkd
+              
+            </div>
+            <div class="btn">
+              <a href="#">head more</a>
+            </div>
+          </div>
+        </div>
+      
+      
+        <div class="card">
+          <div class="img">
+            <img src="orgil2.png" alt="">
+          </div>
+          <div class="top-text">
+            <div class="name">your name</div>
+          <p>content creator</p>
+          </div>
+          <div class="bottom-text">
+            <div class="text">wadkaiwdkaidkwiakdwwiadkiwkd
+              
+            </div>
+            <div class="btn">
+              <a href="#">head more</a>
+            </div>
+          </div>
+        </div>
 
-          <box-icon
-            name="chevron-down"
-            class="arrow"
-            color="#ffffff"
-          ></box-icon>
+        <div class="card">
+          <div class="img">
+            <img src="orgil3.png" alt="">
+          </div>
+          <div class="top-text">
+            <div class="name">Muhammad Romy Afwan</div>
+          <p>website developer</p>
+          </div>
+          <div class="bottom-text">
+            <div class="text"> web developer, Pengembang yang membuat dan memelihara situs web menggunakan bahasa pemrograman web.
+              
+            </div>
+            <div class="btn">
+              <a href="#">head more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img">
+            <img src="orgil4.png" alt="">
+          </div>
+          <div class="top-text">
+            <div class="name">your name</div>
+          <p>graphic designer</p>
+          </div>
+          <div class="bottom-text">
+            <div class="text">graphic designer, Seni menciptakan elemen visual untuk menyampaikan pesan, seperti logo dan iklan.
+              
+            </div>
+            <div class="btn">
+              <a href="#">head more</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Box Icon -->
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- Load external JavaScript -->
+    <script src="index.js"></script>
   </body>
 </html>

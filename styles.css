@@ -1,305 +1,417 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #000;
   color: #fff;
-  font-family: "Alegreya", serif;
-  min-height: 100vh;
-  overflow: hidden;
 }
 
-.scene-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: scene 4.5s alternate forwards;
-}
 
-.scene-2 {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  animation: scene 5.5s alternate forwards;
-  animation-delay: 5s;
-}
-
-.scene-2 span {
-  font-size: 3rem;
-  font-family: "Shojumaru", system-ui;
-  animation: fadeIn 1s forwards;
-  animation-delay: 5s;
-  z-index: 1;
-  opacity: 0;
-}
-
-.scene-2 span:nth-child(1) {
-  animation-delay: 5.7s;
-  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff,
-    0 0 5px #fff;
-}
-
-.scene-2 span:nth-child(2) {
-  animation-delay: 7s;
-  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff,
-    0 0 5px #fff;
-}
-
-.scene-2 span:nth-child(3) {
-  color: red;
-  animation-delay: 8.3s;
-  text-shadow: 0 0 1px red, 0 0 2px red, 0 0 3px red, 0 0 4px red, 0 0 5px red;
-}
-
-.scene-2 .circle {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: #000;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  animation: circle 1.3s forwards;
-  animation-delay: 9.5s;
-  opacity: 0;
-  box-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff,
-    0 0 5px #ffffff;
-  z-index: 1;
-}
-
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 1rem 6rem;
-}
 
 header {
-  height: 10vh;
   position: fixed;
   top: 0;
-  opacity: 0;
-  width: 100%;
-  z-index: 9999;
-  animation: pageIn 2s forwards;
-  animation-delay: 10.1s;
-}
-
-header .container .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  position: sticky;
-  top: 0;
+  padding: 16px;
+  width: 97%;
+  margin-left: 20px;
+  height: 10vh;
+  background: darkslategray;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  
 }
 
-header .container .content .logo {
+header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header .container .content .logo img {
+header .logo img {
   height: 100%;
   width: 100px;
 }
 
-header .container .content .logo h1 {
-  font-style: italic;
+header .logo a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
-}
-
-header .container .content nav {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-header .container .content nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-header .container .content nav a::after {
-  content: "";
-  display: block;
-  border-bottom: 2px solid red;
-  transform: scaleX(0);
-  transition: transform 0.1s linear;
-}
-
-header .container .content nav a:hover::after {
-  transform: scaleX(0.8);
-  transition: transform 0.1s linear;
-}
-
-.hero {
-  min-height: 100vh;
-  position: relative;
-  opacity: 0;
-  animation: pageIn 2s forwards;
-  animation-delay: 10.1s;
-}
-
-.hero .container .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  height: 100vh;
-}
-
-.hero .container .content video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation: pageIn 2s forwards;
-  animation-delay: 10.1s;
-}
-
-.hero .container .content svg {
-  z-index: 3;
-  margin-bottom: -9rem;
-  opacity: 0;
-  animation: pageIn 2s forwards;
-  animation-delay: 10.2s;
-}
-
-.hero .container .content svg text {
-  text-transform: uppercase;
-  font-family: "Shojumaru", system-ui;
-  font-size: 4rem;
-  animation: stroke 3.5s infinite alternate;
-  stroke-width: 3;
-  stroke: white;
-}
-
-.hero .container .content .about {
-  display: flex;
-  flex-direction: column;
-  z-index: 3;
-  width: 35%;
+  font-size: 25px;
   
 }
 
-.hero .container .content .about p {
-  text-align: center;
-  font-size: 1.1rem;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  animation-delay: 11s;
-  font-family: "Playfair Display", serif;
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
 }
 
-.hero .container .content .arrow {
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 25px;
+  transition: 0.3s linear;
+  margin: 0 20px 0;
+}
+
+header nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #fff;
+  width: 0%;
+  transition: 0.3s linear;
+}
+
+header nav a:hover::after {
+  width: 100%;
+  transition: 0.3s linear;
+}
+
+header .extra-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+header .extra-nav button {
   cursor: pointer;
-  position: absolute;
-  left: 49.3%;
-  bottom: 5rem;
-  width: 50px;
-  height: 50px;
-  z-index: 8;
-  animation: arrow 2s infinite alternate;
-  animation-delay: 11s;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 12px;
+  transition: 0.3s linear;
 }
 
-.hero .container .content{
-  row-gap: 20px;
+header .extra-nav button:nth-child(1) {
+  background: #fff;
+  color: #000;
+}
+
+header .extra-nav button:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.3s linear;
+}
+
+header .hamburger-menu {
+  cursor: pointer;
+  display: none;
+}
+
+header .mobile-nav {
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+section:nth-child(odd) {
+  background-color: gray;
+}
+
+.anggota{
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center; /* Center the cards */
+  gap: 20px; /* Add spacing between cards */
+  align-items: center;
+}
+
+.card {
+  display: flex; /* Set card as a flex container */
+  flex-direction: column; /* Stack the elements vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: space-between; /* Distribute space evenly */
+  height: 280px;
+  max-width: 350px;
+  border-radius: 25px;
+  margin: 0 20px;
+  background: white;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+  height: 480px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .img {
+  height: 200px;
+  width: 100%;
+  display: flex;
+
+}
+
+.card .img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card .top-text {
+  padding: 5px;
+  text-align: center;
+}
+
+.card .top-text .name {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+
+}
+
+.card .top-text p {
+  font-size: 20px;
+  font-weight: 600;
+  color: purple;
+  line-height: 20px;
+}
+
+.card .bottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  border-radius: 25px;
+  visibility: hidden;
+  transition: 0.1s;
+  text-align: center;
+}
+
+.card:hover .bottom-text {
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+.card .bottom-text .text {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.card .bottom-text .btn {
+  margin: 10px 0;
+  
+}
+
+.card .bottom-text .btn a {
+  text-decoration: none;
+  background: purple;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2;
+  border-radius: 25px;
+}
+
+.card .bottom-text .btn a:hover {
+  transform: scale(0.9);
+
+}
+
+.home {
+  height: 100vh;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  padding: 20 10% 0;
+}
+
+.home-content{
+  max-width: 700px;
+  text-align: left; /* Ensures text alignment to the left */
+  margin: 0; /* Remove any centering margin */
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
+}
+
+.home-content p{
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.home-content .img {
+  max-width: 10px;
+}
+
+svg{
+  width: 100%;
+  height: 100%;
+  font-family: raleway;
+}
+
+svg text {
+  text-transform: uppercase;
+  font-size: 5rem;
+  animation: stroke 5s infinite alternate;
 }
 
 @keyframes stroke {
   0% {
-    stroke: red;
-    stroke-width: 0;
-    stroke-dashoffset: 25%;
-    stroke-dasharray: 0 50%;
+      stroke: white;
+      stroke-width: 0;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
   }
   70% {
-    stroke: white;
+      stroke: white;
   }
   80% {
-    stroke: red;
-    stroke-width: 3;
+      stroke: white;
+      stroke-width: 3;
   }
   100% {
-    stroke: white;
-    stroke-width: 0;
-    stroke-dashoffset: -25%;
-    stroke-dasharray: 50% 0;
+      stroke: white;
+      stroke-width: 0;
+      stroke-dashoffset: -25%;
+      stroke-dasharray:50% 0;
   }
 }
 
-@keyframes circle {
-  from {
-    display: block;
-    scale: 0;
-    opacity: 0;
-    filter: brightness(100%);
+@media screen and (max-width: 978px) {
+  .anggota{
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 
-  to {
-    scale: 42;
-    opacity: 1;
-    filter: brightness(0%);
+  .card {
+    max-width: 700px;
+    margin: 20px 0;
   }
 }
 
-@keyframes scene {
-  from {
-    display: flex;
-  }
-
-  to {
+@media screen and (max-width: 1024px) {
+  header nav,
+  header .extra-nav {
     display: none;
   }
+
+  header .hamburger-menu {
+    display: block;
+  }
+
+  header .mobile-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    height: 100vh;
+    background-color: #000;
+    z-index: 999;
+    transition: all 0.2s linear;
+    
+    
+  }
+
+  header .mobile-nav.show {
+    transform: translateY(0);
+    transition: all 0.2s linear;
+  }
+
+  header .mobile-nav .close {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+
+  header .mobile-nav .close svg {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+  }
+
+  header .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  header .mobile-nav ul li {
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    width: 25%;
+  }
+
+  header .mobile-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 36px;
+    transition: 0.3s linear;
+  }
+
+  header .mobile-nav ul li .nav-link::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #fff;
+    width: 0%;
+    transition: 0.3s linear;
+  }
+
+  header .mobile-nav ul li:hover .nav-link::after {
+    width: 100%;
+    transition: 0.3s linear;
+  }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@media screen and (max-width: 768px) {
+  header .mobile-nav ul li {
+    width: 35%;
   }
 }
 
-@keyframes pageIn {
-  from {
-    opacity: 0;
+@media screen and (max-width: 450px) {
+  header .mobile-nav ul li {
+    width: 50%;
   }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes arrow {
-  from {
-    transform: translateY(0px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(1.5rem);
-    opacity: 1;
-  }
+  .flip-card{
+    width: 10px;}
 }
